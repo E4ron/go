@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="shortcut icon" href="/r/favicon.ico" type="image/x-icon">
+    <link rel="stylesheet" href="/r/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{.Title}}</title>
+</head>
+<body>
+<header>
+    <div  class="main">
+        <a href="">{{.A1}}</a>
+        <a href="">{{.A2}}</a>
+    </div>
+</header>
+<div class="container_date">
+    <div class="Date">
+        <input type="date" value="{{.Date}}">
+    </div>
+</div>
+<div class="Product">
+    <ul>
+    </ul>
+</div>
+<nav>
+<div class="burger">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+    </div>
+    <ul>
+        {{range $_, $product := .Product}}
+        <li><a href="#">{{$product}}</a></li>
+        {{end}}
+    </ul>
+</nav>
+<script src="/r/script.js"></script>
+</body>
+</html>
